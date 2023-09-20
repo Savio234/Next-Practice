@@ -1,13 +1,18 @@
 import Image from 'next/image'
-import styles from './page.module.css'
+import Head from 'next/head'
+import styles from '@/styles/page.module.css'
 
-export default function Home() {
+function Home() {
   return (
     <main className={styles.main}>
+      <Head>
+        <title>Next Practice</title>
+        <meta name="keywords" content="web development, programming" />
+      </Head>
       <div className={styles.description}>
         <p>
           Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
+          <code className={styles.code}>page/index.tsx</code>
         </p>
         <div>
           <a
@@ -93,3 +98,4 @@ export default function Home() {
     </main>
   )
 }
+export default Home
