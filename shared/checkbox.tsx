@@ -47,7 +47,6 @@ const CheckboxComponent = () => {
     ]);
     // const [checkedboxes, setCheckedBoxes] = useState<any[]>([
     //   {id: 1, option: false}, {id: 2, option: false}, {id: 3, option: false}, {id: 4, option: false}])
- 
 	const handleCheckBox = (id: number) => {
 		// const updatedTokens = [...tokenSelects];
 		const updatedTokens = [...checkedboxes];
