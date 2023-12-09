@@ -2,12 +2,12 @@ import React, { useState, useEffect } from 'react'
 import styles from './ModalElement.module.scss'
 
 const ModalElement = ({ isOpen, onClose, children }: any) => {
-    // const [isModalOpen, setIsModalOpen] = useState(isOpen);
-    const [isModalOpen, setIsModalOpen] = useState(false);
+    // const [isModalOpen, setIsModalOpen] = useState(isOpen); // To handle opening across diff components
+    const [isModalOpen, setIsModalOpen] = useState(false); // To handle opening the modal of locally
 
-    // useEffect(() => {
-    //     setIsModalOpen(isOpen);
-    // }, [isOpen]);
+    useEffect(() => {
+        setIsModalOpen(isOpen);
+    }, [isOpen]);
 
     const handleClose = () => {
         setIsModalOpen(false);
