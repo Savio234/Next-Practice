@@ -16,6 +16,20 @@ const Header = () => {
 		event.stopPropagation();
 	};
 
+	// const handleChange = (event: any, index: number) => {
+	// 	setCheckedBoxes({...checkedboxes, [event?.target.name]: event?.target.checked})
+	// 	const size = event.target.value;
+	// 	if (checkedboxes[index]?.event?.target?.checked) {
+	// 	  setSelectedSizes([...selectedSizes, size] as any); // Add size to selectedSizes
+	// 	} else {
+	// 	  setSelectedSizes(selectedSizes.filter((s) => s !== size)); // Remove size from selectedSizes
+	// 	}
+	// 	console.log(size);
+	//   }
+	//   const filteredProducts = selectedSizes.length > 0
+	// 	? products?.filter((product: any) => selectedSizes.includes(product.size))
+	// 	: products;
+
 	// useEffect(() => {
 	// 	const element = ref.current;
 	// 	const navList =
