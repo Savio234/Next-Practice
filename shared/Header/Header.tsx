@@ -30,42 +30,6 @@ const Header = () => {
 	// 	? products?.filter((product: any) => selectedSizes.includes(product.size))
 	// 	: products;
 
-	// useEffect(() => {
-	// 	const element = ref.current;
-	// 	const navList =
-	// 		element?.children[0].children[1].children[0].children[0].childNodes;
-	// 	if (typeof document !== "undefined") {
-	// 		const sections = document.querySelectorAll("section");
-	// 		const navLi = document.querySelectorAll("li");
-	// 		window.onscroll = () => {
-	// 			let current: any = "";
-
-	// 			sections.forEach(section => {
-	// 				const sectionTop = section.offsetTop;
-	// 				if (scrollY >= sectionTop - 150) {
-	// 					current = section.getAttribute("id");
-	// 				}
-	// 			});
-
-	// 			navList?.forEach((li: any) => {
-	// 				// console.log(current)
-	// 				// if (scrollY == 0) {
-	// 				//   if (li.classList.contains('home')) {
-	// 				//     li.classList.add('active-nav')
-	// 				//   }
-	// 				// }else{
-
-	// 				// }
-	// 				li.classList.remove("active-nav");
-	// 				if (li.classList.contains(current)) {
-	// 					li.classList.add("active-nav");
-	// 				}
-	// 			});
-	// 		};
-	// 		// console.log(navList)
-	// 	}
-	// }, []);
-
 	useEffect(() => {
 		const handleClickOutside = () => {
 			setDropDown(false);
