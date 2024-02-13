@@ -1,9 +1,10 @@
+import MainLayout from '@/layout/Main/MainLayout'
 import React from 'react'
 
-const Index = () => {
+export default function Index() {
   return (
-    <div>About NextJS</div>
+    <MainLayout>
+      <h1>About Page</h1>
+    </MainLayout>
   )
 }
-
-export default Index

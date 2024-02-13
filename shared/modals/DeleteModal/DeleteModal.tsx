@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import ModalElement from '@/shared/ModalElementAsProp'
+import ModalElement from '@/shared/ModalElement/ModalElement'
 
 const DeleteDrinkModal = ({ isOpen, onClose}: any) => {
   return (

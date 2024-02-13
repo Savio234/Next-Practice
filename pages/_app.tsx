@@ -1,7 +1,7 @@
 import React from 'react'
 import type { Metadata } from 'next'
+import MainLayout from '@/layout/Main/MainLayout'
 import { AppProps } from 'next/app'
-import Layout from '@/components/layout/Layout'
 import '@/styles/globals.css'
 
 
@@ -13,9 +13,9 @@ export const metadata: Metadata = {
 function App({Component, pageProps}: AppProps ) {
   return (
     <>
-      <Layout>
+      <MainLayout>
         <Component {...pageProps} />
-      </Layout>
+      </MainLayout>
     </>
   )
 }

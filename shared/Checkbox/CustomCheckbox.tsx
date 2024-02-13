@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 
 const CheckboxComponent = () => {
     const [selectAll, setSelectAll] = useState(false);
-    const [checkedboxes, setCheckedBoxes] = useState<any>({option1: false, option2: false, option3: false, option4: false})
     const [tokenSelects, setTokenSelects] = useState<any[]>([
       {
         id: 1,
@@ -45,16 +44,13 @@ const CheckboxComponent = () => {
         isSelected: false,
       },
     ]);
-    // const [checkedboxes, setCheckedBoxes] = useState<any[]>([
-    //   {id: 1, option: false}, {id: 2, option: false}, {id: 3, option: false}, {id: 4, option: false}])
 	const handleCheckBox = (id: number) => {
-		// const updatedTokens = [...tokenSelects];
-		const updatedTokens = [...checkedboxes];
+		const updatedTokens = [...tokenSelects];
 
 		const tokenIndex = updatedTokens.findIndex(token => token.id === id);
 		if (tokenIndex !== -1) {
 			updatedTokens[tokenIndex].option = !updatedTokens[tokenIndex].option;
-			setCheckedBoxes(updatedTokens);
+			setTokenSelects(updatedTokens);
  
 			// Check if all tokens are selected or not
 			const allSelected = updatedTokens.every(token => token.option);
@@ -63,25 +59,20 @@ const CheckboxComponent = () => {
 	};
  
 	const handleClearAll = () => {
-		// const updatedTokens = [...tokenSelects];
-		// const newSelectAll = !selectAll;
+		const updatedTokens = [...tokenSelects];
+		const newSelectAll = !selectAll;
  
-		// updatedTokens.forEach(token => {
-		// 	token.isSelected = newSelectAll;
-		// });
+		updatedTokens.forEach(token => {
+			token.isSelected = newSelectAll;
+		});
  
-		// setTokenSelects(updatedTokens);
-		// setSelectAll(newSelectAll);
-    const updatedTokens = [...checkedboxes]
-    const newClearAll = selectAll
-    updatedTokens.forEach(token => {
-      token.option = newClearAll
-    })
-    setCheckedBoxes(updatedTokens)
-    setSelectAll(newClearAll)
+		setTokenSelects(updatedTokens);
+		setSelectAll(newSelectAll);
 	};
   return (
-    <div>checkbox</div>
+    <div onChange={() => handleCheckBox}>
+      checkbox
+    </div>
   )
 }
 

@@ -1,14 +1,19 @@
-import React, {useEffect} from 'react'
+import React, { ReactElement, ReactNode } from 'react'
+import Header from '@/shared/Header/Header'
+import Footer from '@/shared/Footer/Footer'
 import styles from './MainLayout.module.css'
 
-const MainLayout = () => {
-    // useEffect(() => {
-	// 	let bgColour = document.body.style;
-	// 	bgColour.backgroundColor =
-	// 	type === "soft" && route !== "/alcohol" ? "#540068" : "#E77644";
-	// });
+const MainLayout = ({children}: any) => {
   return (
-    <div>MainLayout</div>
+    <div className={styles.layout}>
+        <Header />
+        <main className={styles.layout_background}>
+            <div className={styles.layout_content}>
+              {children}
+            </div>
+        </main>
+        <Footer />
+    </div>
   )
 }
 
